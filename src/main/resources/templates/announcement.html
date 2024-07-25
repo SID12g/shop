@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>ann</title>
 </head>
 <body>
-$END$
+<div th:each="item : ${items}" style="display: flex">
+    <p th:text="${item.id}"></p>
+    <p th:text="${item.title}"></p>
+    <p th:text="${item.date}"></p>
+</div>
 </body>
 </html>

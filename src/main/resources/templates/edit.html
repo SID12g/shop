@@ -10,9 +10,10 @@
 </head>
 <body>
 <div th:replace="~{nav.html::navbar}"></div>
-<form action="/add" method="POST">
-    <input name="title">
-    <input name="price">
+<form action="/edit" method="POST">
+    <input th:value="${data.title}" name="title">
+    <input th:value="${data.price}" name="price">
+    <input style="display: none" th:value="${data.id}" name="id">
     <button type="submit">전송</button>
 </form>
 
