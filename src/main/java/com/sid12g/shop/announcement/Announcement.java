@@ -1,4 +1,4 @@
-package com.sid12g.shop;
+package com.sid12g.shop.announcement;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

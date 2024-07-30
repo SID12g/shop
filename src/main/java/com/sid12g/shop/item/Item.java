@@ -1,6 +1,5 @@
-package com.sid12g.shop;
+package com.sid12g.shop.item;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

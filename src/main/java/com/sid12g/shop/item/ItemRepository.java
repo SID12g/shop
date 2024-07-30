@@ -1,4 +1,4 @@
-package com.sid12g.shop;
+package com.sid12g.shop.item;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
