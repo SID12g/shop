@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class BasicController {
     @GetMapping("/")
     String GetHello() {
-        return "index.html";
+        return "/index.html";
     }
 
     @GetMapping("/about")
