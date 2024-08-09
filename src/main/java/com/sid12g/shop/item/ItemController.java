@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequiredArgsConstructor
@@ -84,6 +85,13 @@ public class ItemController {
     String getListPage(Model model, @PathVariable Integer id) {
         Page<Item> result = itemRepository.findPageBy(PageRequest.of(id - 1, 3));
 
+        model.addAttribute("items", result);
+        return "list.html";
+    }
+
+    @PostMapping("/search")
+    String postSearch(@RequestParam String searchText, Model model) {
+        var result = itemRepository.rawQuery1(searchText);
         model.addAttribute("items", result);
         return "list.html";
     }
